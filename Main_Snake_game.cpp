@@ -10,6 +10,7 @@ int tailX[100], tailY[100];
 int nTail;
 enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirecton dir;
+
 void Setup()
 {
 	gameOver = false;
@@ -20,6 +21,7 @@ void Setup()
 	fruitY = rand() % height;
 	score = 0;
 }
+
 void Draw()
 {
 	system("cls"); //system("clear");
@@ -64,6 +66,7 @@ void Draw()
 	cout << endl;
 	cout << "Score:" << score << endl;
 }
+
 void Input()
 {
 	if (_kbhit())
@@ -88,6 +91,7 @@ void Input()
 		}
 	}
 }
+
 void Logic()
 {
 	int prevX = tailX[0];
@@ -138,6 +142,7 @@ void Logic()
 		nTail++;
 	}
 }
+
 int main()
 {
 	Setup();
